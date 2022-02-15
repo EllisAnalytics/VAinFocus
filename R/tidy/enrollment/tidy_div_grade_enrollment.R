@@ -57,6 +57,7 @@ tidy_div_grade_enrollment <- function() {
                     values_to = "Enrollment"
                 ) %>%
                 mutate(
+                    DivisionName = glue("{DivisionName} Public Schools"),
                     SchoolNumber = -1,
                     SchoolName = "All Schools",
                     SubgroupCategory = set_subgroup_category(.path),
@@ -91,6 +92,7 @@ tidy_div_grade_enrollment <- function() {
                     values_to = "Enrollment"
                 ) %>%
                 mutate(
+                    DivisionName = glue("{DivisionName} Public Schools"),
                     SchoolNumber = -1,
                     SchoolName = "All Schools",
                     SubgroupCategory = set_subgroup_category(.path),
